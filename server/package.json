@@ -1,0 +1,23 @@
+{
+  "name": "sadu-3cx-openai-voice-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "3CX Call Control voice bot with OpenAI Realtime and frontend WebSocket events",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check live-transcription.js && node --check health-check.js",
+    "health": "node health-check.js",
+    "test:mock": "node tests/mock-integration-test.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "nodemailer": "^9.0.3",
+    "ws": "^8.21.1"
+  }
+}
