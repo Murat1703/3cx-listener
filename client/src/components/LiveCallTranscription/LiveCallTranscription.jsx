@@ -19,11 +19,9 @@ function getMessageKey(message) {
 }
 
 export const LiveCallTranscription = () =>{
-  const [isConnected, setIsConnected] =
-    useState(false);
+  const [isConnected, setIsConnected] = useState(false);
 
-  const [calls, setCalls] =
-    useState({});
+  const [calls, setCalls] = useState({});
 
   useEffect(() => {
     let socket;
